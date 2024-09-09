@@ -1,0 +1,730 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta content="Codescandy" name="author" />
+    <title>Add Product Dashboard eCommerce HTML Template - FreshCart</title>
+    <link href="../libs/dropzone/dist/min/dropzone.min.css" rel="stylesheet" />
+    <!-- Favicon icon-->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../images/favicon/favicon.ico"
+    />
+
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css"
+    />
+
+    <!-- Libs CSS -->
+    <link
+      href="../libs/bootstrap-icons/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../libs/feather-webfont/dist/feather-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="../css/theme.min.css" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-M8S4MT3EYG");
+    </script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "kuc8w5o9nt");
+    </script>
+    <style>
+      #imageContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+      }
+      .imageItem {
+        width: 200px;
+        height: 150px;
+        border: 2px solid #ccc;
+        margin: 5px;
+        position: relative;
+      }
+      .imageItem img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- main wrapper -->
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-glass">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <div class="d-flex align-items-center">
+            <a
+              class="text-inherit d-block d-xl-none me-4"
+              data-bs-toggle="offcanvas"
+              href="#offcanvasExample"
+              role="button"
+              aria-controls="offcanvasExample"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="currentColor"
+                class="bi bi-text-indent-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm10.646 2.146a.5.5 0 0 1 .708.708L11.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zM2 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+            </a>
+
+            <form role="search">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+          </div>
+          <div>
+            <ul
+              class="list-unstyled d-flex align-items-center mb-0 ms-5 ms-lg-0"
+            >
+              <li class="dropdown ms-4">
+                <a
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="../images/avatar/avatar-1.jpg"
+                    alt=""
+                    class="avatar avatar-md rounded-circle"
+                  />
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-end p-0">
+                  <div class="lh-1 px-5 py-4 border-bottom">
+                    <h5 class="mb-1 h6">FreshCart Admin</h5>
+                    <small>admindemo@email.com</small>
+                  </div>
+                  <div class="border-top px-5 py-3">
+                    <a href="#">Log Out</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main-wrapper">
+      <!-- navbar vertical -->
+      <!-- navbar -->
+      <nav class="navbar-vertical-nav d-none d-xl-block">
+        <div class="navbar-vertical">
+          <div class="px-4 py-5">
+            <a href="./adminHome" class="navbar-brand">
+              <img src="../images/logo/freshcart-logo.svg" alt="" />
+            </a>
+          </div>
+          <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
+            <ul class="navbar-nav flex-column" id="sideNavbar">
+              <li class="nav-item">
+                <a class="nav-link" href="./adminHome">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-house"></i
+                    ></span>
+                    <span class="nav-link-text">Dashboard</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item mt-6 mb-3">
+                <span class="nav-label">Store Managements</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./products">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-cart"></i
+                    ></span>
+                    <span class="nav-link-text">Products</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./categories">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-list-task"></i
+                    ></span>
+                    <span class="nav-link-text">Categories</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/admin/order-list">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"><i class="bi bi-bag"></i></span>
+                    <span class="nav-link-text">Orders</span>
+                  </div>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./vendor">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-shop"></i
+                    ></span>
+                    <span class="nav-link-text">Coupon</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./customers">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-people"></i
+                    ></span>
+                    <span class="nav-link-text">Customers</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/admin/banners">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"><i class="bi bi-people"></i></span>
+                    <span class="nav-link-text">Banner Management</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/admin/promotion">
+                  <div class="d-flex align-items-center">
+                  <span class="nav-link-icon"><i class="bi bi-people"></i></span>
+                  <span class="nav-link-text">Promotions</span>
+                  </div>
+                </a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./reviews">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-star"></i
+                    ></span>
+                    <span class="nav-link-text">Reviews</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <nav
+        class="navbar-vertical-nav offcanvas offcanvas-start navbar-offcanvac"
+        tabindex="-1"
+        id="offcanvasExample"
+      >
+        <div class="navbar-vertical">
+          <div
+            class="px-4 py-5 d-flex justify-content-between align-items-center"
+          >
+            <a href="./adminHome.hbs" class="navbar-brand">
+              <img src="../images/logo/freshcart-logo.svg" alt="" />
+            </a>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
+            <ul class="navbar-nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="./adminHome">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-house"></i
+                    ></span>
+                    <span>Dashboard</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item mt-6 mb-3">
+                <span class="nav-label">Store Managements</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./products">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-cart"></i
+                    ></span>
+                    <span class="nav-link-text">Products</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./categories">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-list-task"></i
+                    ></span>
+                    <span class="nav-link-text">Categories</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/admin/order-list">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"><i class="bi bi-bag"></i></span>
+                    <span class="nav-link-text">Orders</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./vendor">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-shop"></i
+                    ></span>
+                    <span class="nav-link-text">Coupon</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./customers">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-people"></i
+                    ></span>
+                    <span class="nav-link-text">Customers</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/admin/banners">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"><i class="bi bi-people"></i></span>
+                    <span class="nav-link-text">Banner Management</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/admin/promotion">
+                  <div class="d-flex align-items-center">
+                  <span class="nav-link-icon"><i class="bi bi-people"></i></span>
+                  <span class="nav-link-text">Promotions</span>
+                  </div>
+                </a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./reviews">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-star"></i
+                    ></span>
+                    <span class="nav-link-text">Reviews</span>
+                  </div>
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- main -->
+      <main class="main-content-wrapper">
+        <!-- container -->
+        <div class="container">
+          <!-- row -->
+          <div class="row mb-8">
+            <div class="col-md-12">
+              <div class="d-md-flex justify-content-between align-items-center">
+                <!-- page header -->
+                <div>
+                  <span id="response-message"></span>
+                  <h2>Add New Product</h2>
+                  <!-- breacrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item">
+                        <a href="./adminHome" class="text-inherit">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="./products" class="text-inherit">Products</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Add New Product
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+                <!-- button -->
+                <div>
+                  <a href="./products" class="btn btn-light">Back to Product</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row -->
+          <div class="row">
+            <div class="col-lg-8 col-12">
+              <!-- card -->
+              <div class="card mb-6 card-lg">
+                <!-- card body -->
+                <div class="card-body p-6">
+                  <h4 class="mb-4 h5">Product Information</h4>
+                  <div class="row">
+                    <!-- input -->
+                    <div class="mb-3 col-lg-6">
+                      <label class="form-label">Title</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Product Name"
+                        id="productName"
+                        required
+                      />
+                      <span class="text-danger" id="productName_error"></span>
+                    </div>
+
+                    <!-- input -->
+                    <div class="mb-3 col-lg-6">
+                      <label class="form-label">Product Category</label>
+                      <select class="form-select" id="selectedCategory">
+                        <option selected>Product Category</option>
+                        <% categories.forEach(element => { %>
+                        <option><%= element.categoryName %></option>
+                        <% }) %>
+                      </select>
+                      <span class="text-danger" id="category_error"></span>
+                    </div>
+
+                    <!-- input -->
+                    <div class="mb-3 col-lg-6">
+                      <label class="form-label">Weight</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Weight in kg or Litre"
+                        id="itemWeight"
+                        required
+                      />
+                      <span class="text-danger" id="weight_error"></span>
+                    </div>
+                    <div>
+                      <div class="mb-3 col-lg-12 mt-5">
+                        <!-- heading -->
+                        <h4 class="mb-3 h5">Product Images</h4>
+
+                        <!-- input -->
+                        <div id="imageContainer">
+                          <!-- Images will be inserted here -->
+                        </div>
+                        <span id="imageErr" class="text-danger" tabindex="0"></span>
+                        <div
+                          class="modal fade"
+                          id="imageModal"
+                          tabindex="-1"
+                          role="dialog"
+                          aria-labelledby="imageModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="imageModalLabel">
+                                  Image Options
+                                </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <img
+                                  src=""
+                                  id="modalImage"
+                                  style="max-width: 100%"
+                                />
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" id="cropBtn"> Crop </button>
+                                <button type="button" class="btn btn-success" id="saveBtn"> Save </button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"> Cancel </button>
+                              </div>
+                              <!-- Add this <img> element to display the cropped image -->
+                              <div
+                                class="modal-footer"
+                                id="croppedImageContainer"
+                                style="display: none"
+                              >
+                                <h5>Cropped Image</h5>
+                                <img
+                                  src=""
+                                  id="croppedImage"
+                                  style="max-width: 100%"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <input type="file" id="fileInput" style="display: none" accept="image/*" />
+                        <button id="insertBtn" class="btn btn-primary">
+                          Insert Images
+                        </button>
+                      </div>
+                    </div>
+                    <!-- input -->
+                    <div class="mb-3 col-lg-12">
+                      <h4 class="mb-3 h5">Product Descriptions</h4>
+                      <div  id="editor"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-12">
+              <!-- card -->
+              <div class="card mb-6 card-lg">
+                <!-- card body -->
+                <div class="card-body p-6">
+                  <!-- input -->
+
+                  <!-- input -->
+                  <div>
+                    <!-- input -->
+                    <div class="mb-3">
+                      <label class="form-label">Product SKU</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="Total Stock"
+                        id="stock_keeping_unit"
+                      />
+                    </div>
+                    <span class="text-danger" id="stock_error"></span>
+                    <!-- input -->
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+              <div class="card mb-6 card-lg">
+                <!-- card body -->
+                <div class="card-body p-6">
+                  <h4 class="mb-4 h5">Product Price</h4>
+                  <!-- input -->
+                  <div class="mb-3">
+                    <label class="form-label">Regular Price</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="$0.00"
+                      id="regular_price"
+                    />
+                    <span id="regular_price_error" class="text-danger"></span>
+                  </div>
+
+                  <!-- input -->
+                  <div class="mb-3">
+                    <label class="form-label">Discounted Price</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="$0.00"
+                      id="sale_price"
+                    />
+                    <span id="sale_price_error" class="text-danger"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="d-grid">
+                <a id="createProduct" class="btn btn-primary">Create Product</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  var cropper;
+  var currentImageItem; // Variable to store the currently selected image item
+
+  // Event delegation for dynamically added images
+  document.getElementById("imageContainer").addEventListener("click", function (event) {
+    if (event.target.tagName === "IMG" && event.target.closest(".imageItem")) {
+      var imageUrl = event.target.getAttribute("src");
+      document.getElementById("modalImage").setAttribute("src", imageUrl);
+      var modal = new bootstrap.Modal(document.getElementById("imageModal"));
+      modal.show();
+      currentImageItem = event.target.closest(".imageItem"); // Store the currently selected image item
+      if (cropper) {
+        cropper.replace(imageUrl);
+      }
+    }
+
+    // Remove image when clicking the remove button
+    if (event.target.classList.contains("removeBtn")) {
+      var imageItem = event.target.closest(".imageItem");
+      imageItem.remove(); // Remove the entire image item
+    }
+  });
+
+  // Crop button click handler
+  document.getElementById("cropBtn").addEventListener("click", function () {
+    if (cropper) {
+      cropper.crop();
+    }
+  });
+
+  // Save button click handler
+  document.getElementById("saveBtn").addEventListener("click", function () {
+    if (cropper && currentImageItem) {
+      var croppedCanvas = cropper.getCroppedCanvas();
+      var croppedImage = croppedCanvas.toDataURL();
+      currentImageItem.querySelector("img").setAttribute("src", croppedImage); // Replace only the current image in the container
+      var modal = bootstrap.Modal.getInstance(document.getElementById("imageModal"));
+      modal.hide();
+    }
+  });
+
+  // Insert button click handler
+  document.getElementById("insertBtn").addEventListener("click", function () {
+    document.getElementById("fileInput").click();
+  });
+
+  // Handle file input change event
+  document.getElementById("fileInput").addEventListener("change", function (event) {
+    var files = event.target.files;
+
+    if (files) {
+      Array.from(files).forEach(function (file) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          var imageUrl = e.target.result;
+
+          // Create an image item with a remove button
+          var imageItem = document.createElement("div");
+          imageItem.classList.add("imageItem");
+
+          var img = document.createElement("img");
+          img.setAttribute("src", imageUrl);
+
+          // Create the remove button
+          var removeBtn = document.createElement("button");
+          removeBtn.classList.add("removeBtn" , 'btn' , 'btn-outline-danger' , 'btn-sm');
+          removeBtn.textContent = "Remove";
+          removeBtn.style.display = "block";
+          removeBtn.style.marginTop = "10px";
+
+          // Append image and remove button to the image item
+          imageItem.appendChild(img);
+          imageItem.appendChild(removeBtn);
+
+          document.getElementById("imageContainer").appendChild(imageItem);
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+  });
+
+  // Initialize Cropper when the modal is shown
+  document.getElementById("imageModal").addEventListener("shown.bs.modal", function () {
+    cropper = new Cropper(document.getElementById("modalImage"), {
+      aspectRatio: 16 / 9,
+      crop: function (event) {
+        console.log(event.detail.x);
+        console.log(event.detail.y);
+        console.log(event.detail.width);
+        console.log(event.detail.height);
+        console.log(event.detail.rotate);
+        console.log(event.detail.scaleX);
+        console.log(event.detail.scaleY);
+      },
+    });
+  });
+
+  // Destroy Cropper when the modal is hidden
+  document.getElementById("imageModal").addEventListener("hidden.bs.modal", function () {
+    if (cropper) {
+      cropper.destroy();
+      cropper = null;
+    }
+    document.getElementById("modalImage").setAttribute("src", ""); // Clear the src attribute of the modal image
+  });
+
+  // Ensure the close button works to close the modal
+  document.querySelectorAll('.close').forEach(function (button) {
+    button.addEventListener('click', function () {
+      var modal = bootstrap.Modal.getInstance(document.getElementById("imageModal"));
+      modal.hide();
+    });
+  });
+});
+
+    </script>
+    <!-- <script src="../libs/jquery/dist/jquery.min.js"></script> -->
+    <script src="../libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../libs/simplebar/dist/simplebar.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="../js/theme.min.js"></script>
+
+    <script src="../libs/quill/dist/quill.min.js"></script>
+    <script src="../js/vendors/editor.js"></script>
+    <script src="../js/addProduct.js"></script>
+  </body>
+</html>

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<!-- Mirrored from freshcart.codescandy.com/dashboard/order-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Mar 2024 09:08:21 GMT -->
+<head>
+      <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="Codescandy" name="author">
+      <title>Order List- FreshCart</title>
+      <!-- Favicon icon-->
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon/favicon.ico">
+
+
+<!-- Libs CSS -->
+<link href="../libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="../libs/feather-webfont/dist/feather-icons.css" rel="stylesheet">
+<link href="../libs/simplebar/dist/simplebar.min.css" rel="stylesheet">
+
+<!-- sales report download -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.css"
+    />
+    <!-- DataTables Buttons CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/3.0.1/css/buttons.dataTables.css"
+    />
+
+    <!-- datatables time date -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/datetime/1.5.2/css/dataTables.dateTime.min.css"
+	/>
+
+
+<link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.0.2/css/buttons.dataTables.css">
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" />
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="../css/theme.min.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
+<script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag() {
+      dataLayer.push(arguments);
+   }
+   gtag("js", new Date());
+
+   gtag("config", "G-M8S4MT3EYG");
+</script>
+ <script type="text/javascript">
+   (function (c, l, a, r, i, t, y) {
+      c[a] =
+         c[a] ||
+         function () {
+            (c[a].q = c[a].q || []).push(arguments);
+         };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+   })(window, document, "clarity", "script", "kuc8w5o9nt");
+</script>
+
+   </head>
+
+   <body>
+      <!-- main -->
+      <!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-glass">
+	<div class="container-fluid">
+		<div class="d-flex justify-content-between align-items-center w-100">
+			<div class="d-flex align-items-center">
+				<a class="text-inherit d-block d-xl-none me-4" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-text-indent-right" viewBox="0 0 16 16">
+						<path
+							d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm10.646 2.146a.5.5 0 0 1 .708.708L11.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zM2 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+						/>
+					</svg>
+				</a>
+			</div>
+			<div>
+				<ul class="list-unstyled d-flex align-items-center mb-0 ms-5 ms-lg-0">
+					<li class="dropdown ms-4">
+						<a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="../images/avatar/avatar-1.jpg" alt="" class="avatar avatar-md rounded-circle" />
+						</a>
+
+						<div class="dropdown-menu dropdown-menu-end p-0">
+							<div class="lh-1 px-5 py-4 border-bottom">
+								<h5 class="mb-1 h6">FreshCart Admin</h5>
+								<small>admindemo@email.com</small>
+							</div>
+							<div class="border-top px-5 py-3">
+								<a href="#">Log Out</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+
+      <div class="main-wrapper">
+         <!-- navbar vertical -->
+         <!-- navbar -->
+<nav class="navbar-vertical-nav d-none d-xl-block">
+	<div class="navbar-vertical">
+		<div class="px-4 py-5">
+			<a href="./adminHome" class="navbar-brand">
+				<img src="../images/logo/freshcart-logo.svg" alt="" />
+			</a>
+		</div>
+		<div class="navbar-vertical-content flex-grow-1" data-simplebar="">
+			<ul class="navbar-nav flex-column" id="sideNavbar">
+				<li class="nav-item">
+					<a class="nav-link " href="/admin/adminHome">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-house"></i></span>
+							<span class="nav-link-text">Dashboard</span>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item mt-6 mb-3">
+					<span class="nav-label">Store Managements</span>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="./products">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-cart"></i></span>
+							<span class="nav-link-text">Products</span>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="./categories">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-list-task"></i></span>
+							<span class="nav-link-text">Categories</span>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="/admin/order-list">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-bag"></i></span>
+							<span class="nav-link-text">Orders</span>
+						</div>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link " href="./vendor">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-shop"></i></span>
+							<span class="nav-link-text">Coupon</span>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="./customers">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-people"></i></span>
+							<span class="nav-link-text">Customers</span>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="/admin/banners">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-people"></i></span>
+							<span class="nav-link-text">Banner Management</span>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/admin/promotion">
+					  <div class="d-flex align-items-center">
+						<span class="nav-link-icon"><i class="bi bi-people"></i></span>
+						<span class="nav-link-text">Promotions</span>
+					  </div>
+					</a>
+				  </li>
+				<li class="nav-item">
+					<a class="nav-link " href="./reviews">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-star"></i></span>
+							<span class="nav-link-text">Reviews</span>
+						</div>
+					</a>
+				</li>
+				<!-- Nav item -->
+
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<nav class="navbar-vertical-nav offcanvas offcanvas-start navbar-offcanvac" tabindex="-1" id="offcanvasExample">
+	<div class="navbar-vertical">
+		<div class="px-4 py-5 d-flex justify-content-between align-items-center">
+			<a href="./adminHome" class="navbar-brand">
+				<img src="../images/logo/freshcart-logo.svg" alt="" />
+			</a>
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		</div>
+		<div class="navbar-vertical-content flex-grow-1" data-simplebar="">
+			<ul class="navbar-nav flex-column">
+				<li class="nav-item">
+					<a class="nav-link " href="/admin/adminHome">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-house"></i></span>
+							<span>Dashboard</span>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item mt-6 mb-3">
+					<span class="nav-label">Store Managements</span>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="/admin/products">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-cart"></i></span>
+							<span class="nav-link-text">Products</span>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="/admin/categories">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-list-task"></i></span>
+							<span class="nav-link-text">Categories</span>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="/admin/order-list">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-bag"></i></span>
+							<span class="nav-link-text">Orders</span>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="/admin/vendor">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-shop"></i></span>
+							<span class="nav-link-text">Sellers / Vendors</span>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="/admin/customers">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-people"></i></span>
+							<span class="nav-link-text">Customers</span>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="/admin/banners">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-people"></i></span>
+							<span class="nav-link-text">Banner Management</span>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/admin/promotion">
+					  <div class="d-flex align-items-center">
+						<span class="nav-link-icon"><i class="bi bi-people"></i></span>
+						<span class="nav-link-text">Promotions</span>
+					  </div>
+					</a>
+				  </li>
+				<li class="nav-item">
+					<a class="nav-link " href="/admin/reviews">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-star"></i></span>
+							<span class="nav-link-text">Reviews</span>
+						</div>
+					</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+
+         <!-- main wrapper -->
+		 <main class="main-content-wrapper">
+			<div class="container">
+			  <!-- Page Header -->
+			  <div class="row mb-4">
+				<div class="col-md-12">
+				  <h2 class="display-4 mb-2">Order List</h2>
+				  <nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+					  <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Dashboard</a></li>
+					  <li class="breadcrumb-item active" aria-current="page">Order List</li>
+					</ol>
+				  </nav>
+				</div>
+			  </div>
+		  
+			  <!-- Order List Card -->
+			  <div class="row">
+				<div class="col-12">
+				  <div class="card shadow-sm">
+					<div class="card-header bg-light">
+					  <h5 class="card-title mb-0">Filter Orders</h5>
+					</div>
+					<div class="card-body">
+					  <!-- Date Filter -->
+					  <form class="row g-3 align-items-center mb-4">
+						<div class="col-md-3">
+						  <label for="min" class="form-label">Start date:</label>
+						  <input type="date" class="form-control" id="min" name="min">
+						</div>
+						<div class="col-md-3">
+						  <label for="max" class="form-label">End date:</label>
+						  <input type="date" class="form-control" id="max" name="max">
+						</div>
+						<div class="col-md-6">
+						  <label class="form-label">Quick select:</label>
+						  <div class="btn-group w-100" role="group">
+							<button type="button" id="day" class="btn btn-outline-primary">Day</button>
+							<button type="button" id="week" class="btn btn-outline-primary">Week</button>
+							<button type="button" id="month" class="btn btn-outline-primary">Month</button>
+							<button type="button" id="year" class="btn btn-outline-primary">Year</button>
+						  </div>
+						</div>
+					  </form>
+		  
+					  <!-- Order Table -->
+					  <div class="table-responsive">
+						<table class="table table-hover table-striped" id="tableOrders">
+						  <thead class="table-light">
+							<tr>
+							  <th>Order</th>
+							  <th>Date</th>
+							  <th>Payment Method</th>
+							  <th>Total</th>
+							  <th>Actions</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<% if (orders && orders.length > 0) { %>
+							  <% orders.forEach(order => { %>
+								<tr>
+								  <td>
+									<div class="d-flex flex-wrap">
+									  <% order.products.forEach((product, index) => { %>
+										<img src="../../user/assets/images/productImages/<%= product.product.image[0] %>" 
+											 alt="Product Image" 
+											 class="img-thumbnail me-2 mb-2" 
+											 style="width: 50px; height: 50px; object-fit: cover;">
+									  <% }) %>
+									</div>
+								  </td>
+								  <td><%= new Date(order.orderDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) %></td>
+								  <td><span class="badge bg-info text-dark"><%= order.paymentMethod %></span></td>
+								  <td><strong>₹ <%= order.transaction_Amt %></strong> for <%= order.products.length %> item(s)</td>
+								  <td>
+									<a href="./single-order/<%= order._id %>" class="btn btn-sm btn-primary">
+									  <i class="bi bi-eye-fill"></i> View
+									</a>
+								  </td>
+								</tr>
+							  <% }); %>
+							<% } else { %>
+							  <tr>
+								<td colspan="5" class="text-center">No orders found</td>
+							  </tr>
+							<% } %>
+						  </tbody>
+						</table>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </main>
+      </div>
+
+      <!-- Libs JS -->
+
+<!-- <script src="../libs/jquery/dist/jquery.min.js"></script> -->
+<script src="../libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../libs/simplebar/dist/simplebar.min.js"></script>
+
+<!-- Theme JS -->
+<script src="../js/theme.min.js"></script>
+
+<!-- sales report -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.0.1/js/dataTables.buttons.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.0.1/js/buttons.dataTables.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.0.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.0.1/js/buttons.print.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+<script src="https://cdn.datatables.net/datetime/1.5.2/js/dataTables.dateTime.min.js"></script>
+
+
+<!-- <script src="../../user/assets/js/pdfPrint.js"></script> -->
+
+
+<script>
+
+let minDate, maxDate;
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Custom filtering function to search data in column four between two values
+    function customFilter(settings, data, dataIndex) {
+        let min = minDate.value ? new Date(minDate.value) : null;
+        let max = maxDate.value ? new Date(maxDate.value) : null;
+        let date = new Date(data[1]); // Assuming date is in the second column, adjust if necessary
+
+        if (
+            (min === null && max === null) ||
+            (min === null && date <= max) ||
+            (min <= date && max === null) ||
+            (min <= date && date <= max)
+        ) {
+            return true;
+        }
+        return false;
+    }
+
+    // Initialize date inputs
+    minDate = document.getElementById('min');
+    maxDate = document.getElementById('max');
+
+    // Initialize DataTable
+	let table = new DataTable('#tableOrders', {
+    dom: 'Bfrtip',
+    buttons: [
+        {
+            extend: 'copy',
+            exportOptions: {
+                columns: ':not(:first-child):not(:last-child)' // Exclude "Order" and "Actions" columns
+            }
+        },
+        {
+            extend: 'csv',
+            exportOptions: {
+                columns: ':not(:first-child):not(:last-child)' // Exclude "Order" and "Actions" columns
+            }
+        },
+        {
+            extend: 'excel',
+            exportOptions: {
+                columns: ':not(:first-child):not(:last-child)' // Exclude "Order" and "Actions" columns
+            }
+        },
+        {
+            extend: 'pdf',
+            exportOptions: {
+                columns: ':not(:first-child):not(:last-child)' // Exclude "Order" and "Actions" columns
+            },
+            customize: function (doc) {
+                // Set table header styling
+                doc.styles.tableHeader = {
+                    fillColor: '#343a40', // Dark background for header
+                    color: '#ffffff',     // White text
+                    alignment: 'center',
+                    bold: true
+                };
+
+                // Add title and adjust alignment
+                doc.content.unshift({
+                    text: 'Order Report',
+                    fontSize: 18,
+                    alignment: 'center',
+                    margin: [0, 0, 0, 20] // Add space before the table
+                });
+
+                // Find the table in the document content array
+                let tableContent = doc.content.filter(function(content) {
+                    return content.table; // Find the object that represents the table
+                })[0]; // Grab the first match
+                
+                // Center the table columns by setting equal widths
+                tableContent.table.widths = Array(tableContent.table.body[0].length + 1).join('*').split('');
+
+                // Center-align all the table cells
+                tableContent.table.body.forEach(function (row) {
+                    row.forEach(function (cell) {
+                        cell.alignment = 'center'; // Align every cell to center
+                    });
+                });
+
+                // Customize the footer
+                doc.footer = function (page, pages) {
+                    return {
+                        columns: [
+                            {
+                                alignment: 'left',
+                                text: 'Generated by FreshCart',
+                                margin: [10, 0]
+                            },
+                            {
+                                alignment: 'right',
+                                text: 'Page ' + page.toString() + ' of ' + pages.toString(),
+                                margin: [0, 0, 10, 0]
+                            }
+                        ]
+                    };
+                };
+            }
+        },
+        {
+            extend: 'print',
+            exportOptions: {
+                columns: ':not(:first-child):not(:last-child)' // Exclude "Order" and "Actions" columns
+            }
+        }
+    ],
+    columnDefs: [
+        { targets: 0, orderable: false }, // Disable sorting for the "Order" column
+        { targets: -1, orderable: false } // Disable sorting for the "Actions" column
+    ]
+});
+
+
+
+    // Add the filter function
+    DataTable.ext.search.push(customFilter);
+
+    // Refilter the table on date input change
+    minDate.addEventListener('change', function () {
+        table.draw();
+    });
+
+    maxDate.addEventListener('change', function () {
+        table.draw();
+    });
+
+	 // Day button click event (New)
+	 document.getElementById('day').addEventListener('click', function () {
+        let today = new Date();
+        let startOfDay = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        let endOfDay = new Date(today.getFullYear(), today.getMonth(), today.getDate()+1);
+
+        minDate.value = startOfDay.toISOString().slice(0, 10);
+        maxDate.value = endOfDay.toISOString().slice(0, 10);
+
+        table.draw();
+    });
+
+    // Week button click event
+    document.getElementById('week').addEventListener('click', function () {
+        let startOfWeek = new Date();
+        startOfWeek.setDate(startOfWeek.getDate() - startOfWeek.getDay());
+        let endOfWeek = new Date(startOfWeek);
+        endOfWeek.setDate(startOfWeek.getDate() + 6);
+
+        minDate.value = startOfWeek.toISOString().slice(0, 10);
+        maxDate.value = endOfWeek.toISOString().slice(0, 10);
+
+        table.draw();
+    });
+
+    // Month button click event
+    document.getElementById('month').addEventListener('click', function () {
+        let startOfMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
+        let endOfMonth = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0);
+
+        minDate.value = startOfMonth.toISOString().slice(0, 10);
+        maxDate.value = endOfMonth.toISOString().slice(0, 10);
+
+        table.draw();
+    });
+
+    // Year button click event
+    document.getElementById('year').addEventListener('click', function () {
+        let startOfYear = new Date(new Date().getFullYear(), 0, 1);
+        let endOfYear = new Date(new Date().getFullYear(), 11, 31);
+
+        minDate.value = startOfYear.toISOString().slice(0, 10);
+        maxDate.value = endOfYear.toISOString().slice(0, 10);
+
+        table.draw();
+    });
+});
+
+
+</script>
+
+   </body>
+
+<!-- Mirrored from freshcart.codescandy.com/dashboard/order-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Mar 2024 09:08:21 GMT -->
+</html>
