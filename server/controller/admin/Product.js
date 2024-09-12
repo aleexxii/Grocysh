@@ -172,14 +172,14 @@ const updatedproductPage = async (req, res) => {
 const existingImages = Array.isArray(req.body.existingImages) ? req.body.existingImages : [];
 const newImages = req.files ? req.files.map((file) => file.filename) : [];
 
-// Combine existing and new images
+
 const images = [...new Set([...existingImages, ...newImages])];
     // Update the product instance
     const updatedProduct = await Product.findByIdAndUpdate(
       updatedQueryId,
       {
         productName,
-        category,
+        selectedCategory:category,
         weight,
         units,
         stock: stock || false,
